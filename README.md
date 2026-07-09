@@ -17,6 +17,11 @@ O script `ProjetoBD1_v01.sql` implementa as seguintes tabelas e regras de negóc
 * **`comentario_do_problema`**: Relacionamento 1:N que registra toda a linha do tempo de discussões dos usuários dentro de uma issue.
 
 * ## v02
+* **`Arquivo`**: Armazena os arquivos de repositórios que podem pertencer vários arquivos ao mesmo repositório, com retrição de nome. 
+* **`Versão_Arquivo`**: Todas as versões salvas do arquivo, da mais antiga até a mais recente.
+* **`URL repositório`**: Trigger que ativa uma função que salva a URL de cada repositório.
+
+* ## v03
 * **`configuracoes`**: Armazena as preferências operacionais de um repositório, gerenciando níveis de visibilidade (público ou privado), a ramificação padrão (branch) e permissões de recursos internos.
 * **`seguranca_e_qualidade`**: Monitora o estado de proteção do repositório, controlando varreduras de vulnerabilidades, análises de dependências ativas e registro de alertas de segurança.
 * **`commit_`**: Registra o histórico individual de envios de código feitos pelos usuários, utilizando chaves identificadoras baseadas em hashes criptográficos (SHA-1) e computando a volumetria de modificações de linhas.
